@@ -16,6 +16,6 @@ Welcome to **The Lost Mind**, a thrilling roguelike 2D dungeon crawler that chal
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the Apache License 2.0 License. See the LICENSE file for details.
 
 Join us in unraveling the mysteries of **The Lost Mind**! Happy exploring!
