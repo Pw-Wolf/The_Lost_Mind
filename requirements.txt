@@ -1,0 +1,5 @@
+numpy
+Requests
+soundfile
+tcod
+pyinstaller

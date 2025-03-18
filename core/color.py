@@ -1,0 +1,49 @@
+white = (0xFF, 0xFF, 0xFF)
+black = (0x0, 0x0, 0x0)
+
+red = (0xFF, 0x0, 0x0)
+rose_red = (186, 22, 39)
+
+orange = (255, 200, 0)
+yellow = (107, 97, 39)
+
+# yellow = (180, 0, 0)
+lime_green = (22, 186, 88)
+
+light_purple = (158, 73, 186)
+purple = (105, 38, 128)
+dark_purple = (70, 8, 92)
+bright_purple = (180, 0, 255)
+
+
+# purple = (122, 36, 158)
+# yellow = (255, 229, 33)
+# yellow = (163, 145, 5)
+# yellow = (130, 115, 0)
+# yellow = (0xFF, 0xFF, 0x0)
+
+player_atk = (0xE0, 0xE0, 0xE0)
+enemy_atk = (0xC0, 0xC0, 0xC0)
+needs_target = (0x3F, 0xFF, 0xFF)
+status_effect_applied = (0x3F, 0xFF, 0x3F)
+descend = (0x9F, 0x3F, 0xFF)
+
+player_die = (0xFF, 0x30, 0x30)
+enemy_die = (0xFF, 0xA0, 0x30)
+
+invalid = (0xFF, 0xFF, 0x00)
+impossible = (0x80, 0x80, 0x80)
+error = (0xFF, 0x40, 0x40)
+
+welcome_text = (0x20, 0xA0, 0xFF)
+health_recovered = (0x0, 0xFF, 0x0)
+
+bar_text = white
+bar_filled = (0x0, 0x60, 0x0)
+bar_empty = (0x40, 0x10, 0x10)
+
+selected = (186, 22, 39)
+menu_title = (191, 17, 17)
+# menu_title = (180, 0, 0)
+# menu_title = (255, 255, 63)
+menu_text = white
