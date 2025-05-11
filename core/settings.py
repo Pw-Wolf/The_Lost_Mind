@@ -40,7 +40,6 @@ class Settings:
 
         return cls._instance
 
-
     @property
     def data_settings(self):
         return self._data_settings
