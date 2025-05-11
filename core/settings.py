@@ -5,37 +5,41 @@ from os import makedirs
 from os.path import exists, isfile
 
 class Settings:
-    def __init__(self, filename: str):
-        self.screen_width = 80
-        self.screen_height = 50
+     _instance = None 
+    
+    def __new__(cls, filename: str):
+        if not cls._instance:
+            cls._instance = super(Settings, cls).__new__(cls)
+            cls._instance.filename = filename
+            cls._instance.screen_width = 80
+            cls._instance.screen_height = 50
+            cls._instance.path_folder = f'C:\\Users\\{getuser()}\\AppData\\Local\\The_Lost_Mind\\'
+            cls._instance.DEFAULT_SETTINGS = {
+                "controls": {
+                    "up": "w",
+                    "down": "s",
+                    "left": "a",
+                    "right": "d",
+                    "inventory": "TAB",
+                    "pick_up": "f",
+                    "inventory_drop": "g",
+                    "look_around": "x",
+                    "stats": "c",
+                    "wait": "q",
+                    "stairs": "e",
+                    "history": "v",
+                    "restart": "BACKSPACE"
+                },
+                "name": "",
+                "theme_classic": False,
+                "fullscreen": False,
+                "volume": 0.05
+            }
+            cls._instance.make_folder()
+            cls._instance._data_settings = cls._instance.load_settings()
 
-        self.filename = filename
-        self.path_folder = f'C:\\Users\\{getuser()}\\AppData\\Local\\The_Lost_Mind\\'
-        self.DEFAULT_SETTINGS = {
-            "controls": {
-                "up": "w",
-                "down": "s",
-                "left": "a",
-                "right": "d",
-                "inventory": "TAB",
-                "pick_up": "f",
-                "inventory_drop": "g",
-                "look_around": "x",
-                "stats": "c",
-                "wait": "q",
-                "stairs": "e",
-                "history": "v",
-                "restart": "BACKSPACE"
-            },
-            "name": "",
-            "theme_classic": False,
-            "fullscreen": False,
-            "volume": 0.05
-        }
+        return cls._instance
 
-
-        self.make_folder()
-        self._data_settings = self.load_settings()
 
     @property
     def data_settings(self):
